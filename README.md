@@ -1,3 +1,3 @@
-# Lab 2 - Starter
+# Lab 3 
 
-[Meeting Minutes - HardCoders](https://aidanrik.github.io/sp26-cse110-lab3/)
+[Lab 3](https://aidanrik.github.io/sp26-cse110-lab3/)
