@@ -1,4 +1,4 @@
-#*Standup Notes* 
+# *Standup Notes* 
 
 ## Team Name: insert team name
 
