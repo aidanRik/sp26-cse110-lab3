@@ -42,7 +42,7 @@ header h1 {
 
 /* color() - wider gamut */
 header p {
-  color: color(srgb 0.95 0.85 0.70);
+  color: color(display-p3 0.95 0.85 0.70);
   font-size: 1.1rem;
 }
 
@@ -90,7 +90,7 @@ h3 {
 /* ========================= FOOTER ======================= */
 footer {
   background-color: rgb(107, 66, 38);
-  color: color(srgb 0.95 0.85 0.70);
+  color: color(display-p3 0.95 0.85 0.70);
   text-align: center;
   padding: 1.5rem;
   font-size: 0.9rem;
