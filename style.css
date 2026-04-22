@@ -1,0 +1,98 @@
+/* CSS VARIABLES */
+:root {
+  --primary-brown: #6b4226;
+  --accent-orange: #e07b39;
+  --bg-beige: #f5efe6;
+  --text-dark: #2e1f0f;
+  --border-color: #c9a882;
+}
+
+/* ======================== COLORS & UNITS ====================== */
+
+/* Universal selector */
+* {
+  box-sizing: border-box;
+}
+
+/* Element selector — body base styles */
+body {
+  background-color: var(--bg-beige, #f5efe6);   /* CSS variable with fallback */
+  color: var(--text-dark, #2e1f0f);
+  font-family: 'Nunito', sans-serif;             /* Google Font */
+  font-size: 16px;                               /* absolute unit: px */
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+}
+
+/* rgb() color */
+header {
+  background-color: rgb(107, 66, 38);
+  color: #f5efe6;                                /* hex color */
+  padding: 2rem 3rem;                            /* relative unit: rem */
+}
+
+/* hsl() color */
+header h1 {
+  color: hsl(30, 80%, 70%);
+  font-family: 'Lora', serif;
+  font-size: 2.5rem;                             /* relative unit: rem */
+  margin: 0;
+}
+
+/* color() - wider gamut */
+header p {
+  color: color(srgb 0.95 0.85 0.70);
+  font-size: 1.1rem;
+}
+
+/* color-mix() */
+nav {
+  background-color: color-mix(in srgb, #6b4226 60%, #e07b39 40%);
+  padding: 1rem 3rem;                            /* relative unit: rem */
+}
+
+nav a {
+  color: #f5efe6;                                /* hex */
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+/* named color for hr */
+hr {
+  border-color: burlywood;                       /* named color */
+  border-style: solid;
+  border-width: 1px;
+  margin-top: 1.5rem;                            /* relative unit: rem */
+  margin-bottom: 1.5rem;
+}
+
+/* ========================= MAIN CONTENT ========================= */
+main {
+  max-width: 900px;                              /* absolute unit: px */
+  margin: 0 auto;
+  padding: 2rem 3rem;
+}
+
+h2 {
+  font-family: 'Lora', serif;
+  color: var(--primary-brown, #6b4226);
+  font-size: 1.5rem;
+  padding-bottom: 0.25in;                        /* absolute unit: in */
+  border-bottom: 2pt solid var(--accent-orange); /* absolute unit: pt */
+}
+
+h3 {
+  color: var(--accent-orange, #e07b39);
+  font-size: 1.1rem;
+}
+
+/* ========================= FOOTER ======================= */
+footer {
+  background-color: rgb(107, 66, 38);
+  color: color(srgb 0.95 0.85 0.70);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  margin-top: 2cm;                               /* absolute unit: cm */
+}
