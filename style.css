@@ -188,3 +188,166 @@ footer small {
   position: relative;
   top: 2px;
 }
+
+
+/* ===================== FLEXBOX ===================== */
+
+/* Flex on the form buttons */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Flex on the feedback form buttons */
+form > p {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* ===================== GRID ===================== */
+
+/* Grid for the task assignments list in new business */
+#new-business ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+#new-business ul li {
+  background-color: color-mix(in srgb, var(--bg-beige) 80%, var(--primary-brown) 20%);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border-left: 3px solid var(--accent-orange);
+}
+
+/* ===================== MEDIA QUERIES ===================== */
+
+/* Tablet */
+@media (max-width: 768px) {
+  header {
+    padding: 0.75rem 1.5rem;
+  }
+
+  nav {
+    padding: 0.4rem 1.5rem;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.75rem;
+    padding: 0.25rem 0;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin: 0;
+    font-size: 0.8rem;
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+
+  #new-business ul {
+    grid-template-columns: 1fr;
+  }
+
+  video {
+    max-width: 100%;
+  }
+}
+
+/* Phone */
+@media (max-width: 480px) {
+  header {
+    padding: 0.5rem 1rem;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+    margin-bottom: 0.1rem;
+  }
+
+  header > p {
+    font-size: 0.85rem;
+    margin: 0 0 0.25rem 0;
+  }
+
+  nav {
+    padding: 0.3rem 1rem;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem 0.6rem;
+  }
+
+  nav ul li {
+    display: inline-block;
+    font-size: 0.75rem;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  form > p {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  nav {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  main {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+  }
+
+  footer {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  fieldset {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  select, textarea, input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
