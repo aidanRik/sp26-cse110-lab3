@@ -189,6 +189,89 @@ footer small {
   top: 2px;
 }
 
+/* ===================== SELECTORS ===================== */
+
+/* Class selector */
+.highlight {
+  background-color: color-mix(in srgb, var(--bg-beige) 70%, var(--accent-orange) 30%);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+/* Attribute selector */
+a[target="_blank"]::after {
+  content: " ↗";
+  font-size: 0.75em;
+}
+
+/* Child combinator */
+main > section {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+/* Adjacent sibling combinator */
+h3 + p {
+  margin-top: 0.25rem;
+}
+
+/* General sibling combinator */
+h2 ~ p {
+  color: var(--text-dark);
+}
+
+/* Combining two selectors */
+span.highlight {
+  font-style: italic;
+}
+
+/* Pseudo-class: hover on links */
+a:hover {
+  color: var(--accent-orange);
+  text-decoration: underline;
+}
+
+/* Selector list + element styling for buttons */
+button[type="submit"], button[type="reset"] {
+  background-color: var(--primary-brown);
+  color: var(--bg-beige);
+  border: none;
+  padding: 0.6rem 1.5rem;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Pseudo-class: hover on buttons */
+button[type="submit"]:hover, button[type="reset"]:hover {
+  background-color: var(--accent-orange);
+}
+
+/* Pseudo-class: active on buttons */
+button[type="submit"]:active, button[type="reset"]:active {
+  opacity: 0.8;
+  transform: scale(0.97);
+}
+
+/* :has() - fieldset highlights when something inside is checked/filled */
+fieldset:has(input:checked) {
+  border-color: var(--accent-orange);
+  border-width: 2px;
+}
+
+/* Nested selectors */
+nav {
+  & ul {
+    & li {
+      & a:hover {
+        opacity: 0.75;
+        text-decoration: underline;
+      }
+    }
+  }
+}
 
 /* ===================== FLEXBOX ===================== */
 
